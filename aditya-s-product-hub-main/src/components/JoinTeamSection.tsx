@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Play, X } from "lucide-react";
+import { Play } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
 const WHY_HIRE_ME_EMBED_URL = "https://www.loom.com/embed/1003cda56e524d3597cc64889a0cd4cf";
@@ -173,8 +173,9 @@ const JoinTeamSection = () => {
             <button
               onClick={() => setShowVideo(false)}
               className="absolute top-3 right-3 z-10 p-1 rounded-full bg-background/80 text-foreground hover:bg-background"
+              aria-label="Close preview"
             >
-              <X className="w-5 h-5" />
+              <span className="sr-only">Close</span>
             </button>
             <iframe
               className="h-full w-full"

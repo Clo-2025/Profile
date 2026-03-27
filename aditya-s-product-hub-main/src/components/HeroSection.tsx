@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, Download, X } from "lucide-react";
+import { Play, Download } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 
 const INTRO_EMBED_URL = "https://www.loom.com/embed/14c6b526c8004ce8b6d8cbe87fac6cb9";
@@ -104,8 +104,9 @@ const HeroSection = () => {
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-3 right-3 z-10 p-1 rounded-full bg-background/80 text-foreground hover:bg-background"
+              aria-label="Close video"
             >
-              <X className="w-5 h-5" />
+              <span className="sr-only">Close</span>
             </button>
             <iframe
               className="h-full w-full"
